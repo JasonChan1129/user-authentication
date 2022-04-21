@@ -3,11 +3,20 @@
 		<header class='col-12 col-md-5 mb-5'>
 			<h2 class='text-center'>Account Login</h2>
 		</header>
-		<form class='col-12 col-md-5 d-flex flex-column align-items-center'>
-			<input class='form-control mb-3' type='email' placeholder='Email' required />
-			<input class='form-control mb-3' type='password' placeholder='Password' required />
+		<form
+			class='col-12 col-md-5 d-flex flex-column align-items-center'
+			action='/login'
+			method='POST'
+		>
+			<input class='form-control mb-3' type='email' placeholder='Email' name='email' required />
+			<input
+				class='form-control mb-3'
+				type='password'
+				placeholder='Password'
+				name='password'
+				required
+			/>
 			<button type='submit' class='btn btn-primary'>Sign in</button>
 		</form>
 	</div>
-
 </div>
