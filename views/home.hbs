@@ -1,7 +1,8 @@
 <div>
 	{{#if user}}
 		<h1>Welcome back, {{user.firstName}}!</h1>
+		<a>logout</a>
 	{{else}}
-		<h1>{{error}}</h1>
+		<p><a href='/login'>Login</a> to continue...</p>
 	{{/if}}
 </div>
