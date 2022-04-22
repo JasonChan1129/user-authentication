@@ -17,7 +17,6 @@ router.post('/', (req, res) => {
 			if (user) {
 				const sessionID = generateSessionID();
 				Session[sessionID] = { user_id: user.id };
-				console.log(Session);
 				res.cookie('session_id', sessionID);
 			}
 			return user ? res.render('home', { user }) : res.render('error');

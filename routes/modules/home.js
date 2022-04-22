@@ -9,11 +9,9 @@ router.get('/', async (req, res) => {
 		const userSession = Session[sessionID];
 		if (userSession) {
 			const user = await User.findOne({ id: userSession.user_id }).lean();
-			if (user) {
-				return res.render('home', { user });
-			} else {
-				return res.render('home');
-			}
+			return user ? res.render('home', { user }) : res.render('home');
+		} else {
+			return res.render('home');
 		}
 	} catch (err) {
 		console.log(err);
